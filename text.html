@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String comparator</title>
+    <style>
+        h1{
+            text-align: center;
+            font-style: italic;
+            color: #6E260E;
+        }
+        .container{
+            background-color: #800020;
+            height: 300px;
+            width: 400px;
+            display: block;
+            margin: 20px auto;;
+            font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            padding: 30px;
+        }
+        .ip{
+            height: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        span{
+            background-color: 	#EADDCA;
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>String comparator</h1>
+    <div class="container">
+        Enter string one :  
+        <input type="text" class="ip" onkeyup="compare()" id="ip1"><br/>
+        Enter string two :
+        <input type="text" class="ip" onkeyup="compare()" id="ip2"><br/>
+        <span id="answer">The strings are  </span>
+        <script>
+            function compare(){
+                t1=document.getElementById("ip1").value
+                t2=document.getElementById("ip2").value
+                ans=document.getElementById("answer")
+                if (t1 ==t2) {
+                    ans.innerText=`The strings are identical`
+                }
+                else {
+                    ans.innerText=`The strings are  not identical`
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
